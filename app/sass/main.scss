@@ -1,0 +1,67 @@
+body {
+    background: gray;
+}
+
+.wrapper {
+    display: block;
+    color: #c5c5c5;
+    .header {
+        height: 70px;
+        h1 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.page-wrap {
+    display: block;
+    width: auto;
+    .boxes .top-boxes {
+        display: table;
+        .box{
+            .box-editor-title span {
+                width: inherit;
+            }
+            width: 32.2%;
+            display: table-row;
+            position: relative;
+        }
+        .box-html, .box-css, .box-js {
+            display: table-cell;;
+        }
+        .editor-resizer {
+            display: table-cell;
+            height: inherit;
+            position: relative;
+            background: #343436;
+            z-index: 2;
+            width: 20px;
+            cursor: col-resize;
+            border-left:1px solid rgba(255,255,255,0.1);
+            border-right:1px solid rgba(0,0,0,0.4);
+        }
+    }
+    .powers {
+        background: rgba(0,0,0,0.4);
+        color: #c5c5c5;
+    }
+    .resizer {        
+        display: inherit;
+        background: #343436;
+        position: relative;
+        z-index: 2;
+        height: 20px;
+        cursor: row-resize;
+        border-left:1px solid rgba(255,255,255,0.1);
+        border-right:1px solid rgba(0,0,0,0.4);
+    }
+}
+
+.output-container {
+    width: auto;
+    .output-sizer {
+
+    }
+}
