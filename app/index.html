@@ -6,13 +6,16 @@
     <script src="../dist/bundle.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-expand-lg">
-        <a class="navbar-brand" href="#">Navbar</a>       
-    </nav>
+    <div class="wrapper">
+        <nav class="navbar navbar-inverse navbar-expand-lg">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button id="run-button" type="button" class="btn btn-default navbar-btn">Run</button>    
+        </nav>
+    </div>
     <div class="page-wrap">
         <div class="boxes">
             <div class="top-boxes">
-                <div class="editor-resizer" title="Drag to resize"></div>
+                <div class="editor-resizer outer-resizer" title="Drag to resize"></div>
                 <div id="box-html" class="box box-html" data-type="html">
                     <div class="powers">
                         <div class="editor-actions-left">
@@ -63,7 +66,7 @@
                         <div id="editor-js"></div>       
                     </div>
                 </div>
-                <div class="editor-resizer" title="Drag to resize"></div>
+                <div class="editor-resizer outer-resizer" title="Drag to resize"></div>
             </div>
             <div class="resizer"></div>
         </div>
