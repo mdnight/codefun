@@ -35,30 +35,39 @@ body {
         .boxes .top-boxes {
             display: table;
             margin-top: 7px;
-            .box{
+            width: inherit;
+            /* .box{ */
+            /*     .box-editor-title span { */
+            /*         //width: inherit; */
+            /*     } */
+            /*     width: 32.2%; */
+            /*     display: block; */
+            /*     position: relative; */
+            /* } */
+            .box-html, .box-css, .box-js {
                 .box-editor-title span {
-                    width: inherit;
+                    //width: inherit;
                 }
                 width: 32.2%;
-                display: table-row;
+                display: table-cell;
                 position: relative;
             }
-            .box-html, .box-css, .box-js {
-                display: table-cell;;
-            }
+            
             .editor-resizer {
                 display: table-cell;
                 height: inherit;
                 position: relative;
                 background: #343436;
                 z-index: 2;
-                width: 20px;
+                min-width: 20px;
+                max-width: 20px;
                 cursor: col-resize;
                 border-left:1px solid rgba(255,255,255,0.1);
                 border-right:1px solid rgba(0,0,0,0.4);
             }
             .outer-resizer {
                 cursor: auto;
+                max-width: 20px;
             }
         }
         .powers {
@@ -71,7 +80,7 @@ body {
                 margin-bottom: 0px;
             }
         }
-        .resizer {        
+        .resizer {
             display: inherit;
             background: #343436;
             position: relative;
@@ -82,17 +91,15 @@ body {
             border-right:1px solid rgba(0,0,0,0.4);
         }
     }
-    
+
     .output-container {
         position: relative;
         width: auto;
-        .output-sizer {
-            height: 50px;
-            .result-div {
-                
-            }
-            //background: rgba(0,0,0,0.4);;
-            
+        height: 100%;
+        #result-frame {
+            display: block;
+            width: 100%;
+            height: 400px;
         }
     }
 }

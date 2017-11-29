@@ -15,6 +15,9 @@ module.exports = {
             jQuery: 'jquery'
         })
     ],
+    node: {
+        fs: "empty"
+    },
     module: {
         rules: [
             {
@@ -44,6 +47,9 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            { test: /\.handlebars$/,
+              use: "handlebars-loader"
             }
         ]
     }
