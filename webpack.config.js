@@ -47,9 +47,6 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            },
-            { test: /\.handlebars$/,
-              use: "handlebars-loader"
             }
         ]
     }
