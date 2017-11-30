@@ -4,18 +4,17 @@
     top: 50%;
     transform: translateY($translate-y);
 }
+$textcolor: #c5c5c5;
 
 body {
-    .navbar {
-        margin-bottom: 0px;
-    }
-    background: gray;
+    background: #343436;
     
     .wrapper {
         position: relative;
         width: auto;
-        color: #c5c5c5;
+        color: $textcolor;
         .navbar {
+            margin-bottom: 1px;
             min-height: 70px;
             #run-button {
                 float: right;
@@ -25,50 +24,24 @@ body {
         }
         .navbar-brand {
             @include align-center(35px, absolute, -50%);
+            color: $textcolor;
         }
     }
     
-    .page-wrap {
-        position: relative;
-        display: block;
-        width: auto;
-        .boxes .top-boxes {
-            display: table;
-            margin-top: 7px;
-            width: inherit;
-            /* .box{ */
-            /*     .box-editor-title span { */
-            /*         //width: inherit; */
-            /*     } */
-            /*     width: 32.2%; */
-            /*     display: block; */
-            /*     position: relative; */
-            /* } */
-            .box-html, .box-css, .box-js {
-                .box-editor-title span {
-                    //width: inherit;
-                }
-                width: 32.2%;
-                display: table-cell;
-                position: relative;
-            }
-            
-            .editor-resizer {
-                display: table-cell;
-                height: inherit;
-                position: relative;
-                background: #343436;
-                z-index: 2;
-                min-width: 20px;
-                max-width: 20px;
-                cursor: col-resize;
-                border-left:1px solid rgba(255,255,255,0.1);
-                border-right:1px solid rgba(0,0,0,0.4);
-            }
-            .outer-resizer {
-                cursor: auto;
-                max-width: 20px;
-            }
+    .mainfield {
+        display: grid;
+        grid-gap: 1px;
+        grid-template-columns: 20px auto 20px auto 20px auto 20px;   
+        .vertical-resizer {
+            grid-column: 1 / 7;
+            grid-row: 2;
+            height: 20px;
+        }
+        .editor-resizer {
+            background: #343436;
+            border-left:1px solid rgba(255,255,255,0.1);
+            border-right:1px solid rgba(0,0,0,0.4);
+            z-index: 2;
         }
         .powers {
             position: relative;
@@ -80,26 +53,12 @@ body {
                 margin-bottom: 0px;
             }
         }
-        .resizer {
-            display: inherit;
-            background: #343436;
-            position: relative;
-            z-index: 2;
-            height: 20px;
-            cursor: row-resize;
-            border-left:1px solid rgba(255,255,255,0.1);
-            border-right:1px solid rgba(0,0,0,0.4);
-        }
     }
-
+    
     .output-container {
-        position: relative;
-        width: auto;
-        height: 100%;
-        #result-frame {
-            display: block;
-            width: 100%;
-            height: 400px;
-        }
+        display: grid;
+        grid-template-columns: auto;
+        height: 50vh;
     }
+    
 }

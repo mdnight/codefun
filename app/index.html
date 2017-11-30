@@ -7,69 +7,65 @@
 </head>
 <body>
     <div class="wrapper">
-        <nav class="navbar navbar-inverse navbar-expand-lg">
+        <nav class="navbar navbar-static-top navbar-inverse navbar-expand-lg">
             <a class="navbar-brand" href="#">CodeFun</a>
             <button id="run-button" type="button" class="btn btn-default navbar-btn">Run</button>    
         </nav>
     </div>
-    <div class="page-wrap">
-        <div class="boxes">
-            <div class="top-boxes">
-                <div class="editor-resizer outer-resizer" title="Drag to resize"></div>
-                <div id="box-html" class="box-html" data-type="html">
-                    <div class="powers">
-                        <div class="editor-actions-left">
-                            <button id="settings-pane-html" class="button" title="Open HTML Settings" style="display: none;"></button>
-                            <h2 id="html-editor-title" class="box-title">
-                                <span class="box-editor-title">HTML</span>
-                            </h2>
-                        </div>
-                        <div class="editor-actions-right">
-                            <button id="button" data-dropdown="#editor-dropdown-html" style="display: none;"></button>
-                        </div>
-                    </div>
-                    <div class="code-wrap">
-                        <div id="editor-html"></div>       
-                    </div>
+    <div class="mainfield">        
+        <div class="editor-resizer outer-resizer" title="Drag to resize"></div>
+        <div id="box-html" class="code-frame" data-type="html">
+            <div class="powers">
+                <div class="editor-actions-left">
+                    <button id="settings-pane-html" class="button" title="Open HTML Settings" style="display: none;"></button>
+                    <h2 id="html-editor-title" class="box-title">
+                        <span class="box-editor-title">HTML</span>
+                    </h2>
                 </div>
-                <div id="hresizer-1" class="editor-resizer horizontal-resizer-1" title="Drag to resize"></div>
-                <div id="box-css" class="box-css" data-type="css">
-                    <div class="powers">
-                        <div class="editor-actions-left">
-                            <button id="settings-pane-css" class="button" title="Open CSS Settings" style="display: none;"></button>
-                            <h2 id="css-editor-title" class="box-title">
-                                <span class="box-editor-title">CSS</span>
-                            </h2>
-                        </div>
-                        <div class="editor-actions-right">
-                            <button id="button" data-dropdown="#editor-dropdown-css" style="display: none;"></button>
-                        </div>
-                    </div>
-                    <div class="code-wrap">
-                        <div id="editor-css"></div>       
-                    </div>
+                <div class="editor-actions-right">
+                    <button id="button" data-dropdown="#editor-dropdown-html" style="display: none;"></button>
                 </div>
-                <div id="hresizer-2" class="editor-resizer horizontal-resizer-2" title="Drag to resize"></div>
-                <div id="box-js" class="box-js" data-type="js">
-                    <div class="powers">
-                        <div class="editor-actions-left">
-                            <button id="settings-pane-js" class="button" title="Open JS Settings" style="display: none;"></button>
-                            <h2 id="js-editor-title" class="box-title">
-                                <span class="box-editor-title">JS</span>
-                            </h2>
-                        </div>
-                        <div class="editor-actions-right">
-                            <button id="button" data-dropdown="#editor-dropdown-js" style="display: none;"></button>
-                        </div>
-                    </div>
-                    <div class="code-wrap">
-                        <div id="editor-js"></div>
-                    </div>
-                </div>
-                <div class="editor-resizer outer-resizer" title="Drag to resize"></div>
             </div>
-            <div class="resizer"></div>
+            <div class="code-wrap">
+                <div id="editor-html"></div>       
+            </div>
         </div>
+        <div id="hresizer-1" class="editor-resizer horizontal-resizer-1" title="Drag to resize"></div>
+        <div id="box-css" class="code-frame" data-type="css">
+            <div class="powers">
+                <div class="editor-actions-left">
+                    <button id="settings-pane-css" class="button" title="Open CSS Settings" style="display: none;"></button>
+                    <h2 id="css-editor-title" class="box-title">
+                        <span class="box-editor-title">CSS</span>
+                    </h2>
+                </div>
+                <div class="editor-actions-right">
+                    <button id="button" data-dropdown="#editor-dropdown-css" style="display: none;"></button>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div id="editor-css"></div>       
+            </div>
+        </div>
+        <div id="hresizer-2" class="editor-resizer horizontal-resizer-2" title="Drag to resize"></div>
+        <div id="box-js" class="code-frame" data-type="js">
+            <div class="powers">
+                <div class="editor-actions-left">
+                    <button id="settings-pane-js" class="button" title="Open JS Settings" style="display: none;"></button>
+                    <h2 id="js-editor-title" class="box-title">
+                        <span class="box-editor-title">JS</span>
+                    </h2>
+                </div>
+                <div class="editor-actions-right">
+                    <button id="button" data-dropdown="#editor-dropdown-js" style="display: none;"></button>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div id="editor-js"></div>
+            </div>
+        </div>
+        <div class="editor-resizer outer-resizer" title="Drag to resize"></div>
+        <div class="vertical-resizer editor-resizer"></div>
     </div>
     <div class="output-container">
         <iframe id="result-frame" allowfullscreen="true" sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-modals allow-forms" allowtransparency="true" class="result-frame" style="background: white;"></iframe>
