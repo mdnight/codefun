@@ -9,7 +9,8 @@ $(document).ready(function() {
         tabindex: 0,
         indentWithTabs: true,
         lineNumbers: true,
-        styleActiveLine: true
+        styleActiveLine: true,
+        lineWrapping: true
     });
 
     CodeMirror($('#editor-css').get(0), {
@@ -20,7 +21,8 @@ $(document).ready(function() {
         tabindex: 0,
         indentWithTabs: true,
         lineNumbers: true,
-        styleActiveLine: true
+        styleActiveLine: true,
+        lineWrapping: true
     });
 
     CodeMirror($('#editor-js').get(0), {
@@ -31,7 +33,8 @@ $(document).ready(function() {
         tabindex: 0,
         indentWithTabs: true,
         lineNumbers: true,
-        styleActiveLine: true
+        styleActiveLine: true,
+        lineWrapping:true
     });
 
     $('#hresizer-1').mousedown(function (e) {
