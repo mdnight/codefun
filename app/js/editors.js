@@ -1,5 +1,5 @@
 import CodeMirror from 'codemirror';
-//var ui = require('webpack-jquery-ui');
+require('webpack-jquery-ui');
 
 
 $(document).ready(function() {
@@ -39,18 +39,19 @@ $(document).ready(function() {
         lineWrapping:true
     });
 
-    // $('#hresizer-1').draggable({
-    //     drag: function(e, ui) {
-    //         $('#box-html').css('flex', '0 1', + ui.offset.left + 'px');
-    //     },
-    //     axis: 'x'
-    // });
+    $('#hresizer-1').draggable({
+        drag: function(e, ui) {
+            $('#box-html').css('flex', '0 1 ' + ui.offset.left + 'px');
 
-    // $('#hresizer-2').draggable({
-    //     drag: function(e, ui) {
-    //         $('#box-css').css('flex', '0 1', + ui.offset.left + 'px');
-    //     },
-    //     axis: 'x'
-    // });
+        },
+        axis: 'x'
+    });
+
+    $('#hresizer-2').draggable({
+        drag: function(e, ui) {
+            $('#box-css').css('flex', '0 1 ' + ui.offset.left + 'px');
+        },
+        axis: 'x'
+    });
 
 });
