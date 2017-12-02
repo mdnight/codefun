@@ -29,19 +29,25 @@ body {
     }
     
     .mainfield {
-        display: grid;
-        grid-gap: 1px;
-        grid-template-columns: 20px auto 20px auto 20px auto 20px;   
-        .vertical-resizer {
-            grid-column: 1 / 7;
-            grid-row: 2;
-            height: 20px;
+        position: relative;
+        display: flex; 
+        width: 100%;    
+        .code-frame {
+            min-width: 125px;
+            flex: 1;
+        }   
+        
+        .horizontal-resizer {
+            //cursor: col-resize;
+            width: 10px;
+            left: 0 !important;
         }
         .editor-resizer {
             background: #343436;
             border-left:1px solid rgba(255,255,255,0.1);
             border-right:1px solid rgba(0,0,0,0.4);
             z-index: 2;
+
         }
         .powers {
             position: relative;

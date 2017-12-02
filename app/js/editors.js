@@ -1,4 +1,6 @@
 import CodeMirror from 'codemirror';
+//var ui = require('webpack-jquery-ui');
+
 
 $(document).ready(function() {
     CodeMirror($('#editor-html').get(0), {
@@ -37,29 +39,18 @@ $(document).ready(function() {
         lineWrapping:true
     });
 
-    $('#hresizer-1').mousedown(function (e) {
-        $('.top-boxes').mousemove(function(event) {
-            updateHTMLWidth(event);
-        });
-    });
+    // $('#hresizer-1').draggable({
+    //     drag: function(e, ui) {
+    //         $('#box-html').css('flex', '0 1', + ui.offset.left + 'px');
+    //     },
+    //     axis: 'x'
+    // });
 
-    $('#hresizer-2').mousedown(function (e) {
-        $('.top-boxes').mousemove(function(event) {
-            var msg = "Handler for .mousemove() called at ";
-            msg += event.pageX + ", " + event.pageY;
-            console.log(msg);
-        });
-    });
+    // $('#hresizer-2').draggable({
+    //     drag: function(e, ui) {
+    //         $('#box-css').css('flex', '0 1', + ui.offset.left + 'px');
+    //     },
+    //     axis: 'x'
+    // });
 
-    $(document).mouseup(function() {
-        $('.top-boxes').off("mousemove");
-    });
 });
-
-
-function updateHTMLWidth(event) {
-    var marg = event.pageX - $('#hresizer-1').position().left;
-    var htmlWidth = event.pageX - $("#box-html").position().left;
-    $('#box-html').width(htmlWidth);
-}
-

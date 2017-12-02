@@ -1,6 +1,5 @@
 import CodeMirror from 'codemirror';
 
-
 $(function(){
     $("#run-button").click(function() {
         var htmlCode = $('.CodeMirror')[0].CodeMirror.getValue();
